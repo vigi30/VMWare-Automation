@@ -49,7 +49,7 @@ def info_VM(event):
     # Find a VM
         content = vc.RetrieveContent()
         #print content
-        lst=['10.57.7.8','10.57.7.9','10.57.7.10','10.57.7.11','10.57.7.12','10.57.7.13']
+        lst=['130.5.7.80','210.5.7.90','150.5.7.100','160.5.7.110','170.7.7.120','180.7.7.130']
         for i in lst:
             print 'rebooting .....',i
             vm = searcher.FindByIp(ip=i, vmSearch=True)
