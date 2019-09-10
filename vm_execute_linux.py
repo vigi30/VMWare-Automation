@@ -39,7 +39,7 @@ try:
 
                                             
 
-    si=SmartConnect(host='192.168.150.15', user='administrator@vsphere.local', pwd='Hitachi@123', port=443, sslContext=context)
+    si=SmartConnect(host='1.1.1.1', user='abcded', pwd='abcdef', port=443, sslContext=context)
     atexit.register(connect.Disconnect, si)
     content = si.RetrieveContent()
     searcher = si.content.searchIndex
@@ -78,7 +78,7 @@ try:
         if re.search('Linux',vm.summary.config.guestFullName):
             vm_path=raw_input("ENter the  path inside a linuxVM if you want to upload ")
             vm_upload_file=raw_input("Enter the path of the file you want to upload in linuxVM ")
-            creds = vim.vm.guest.NamePasswordAuthentication(username='root', password='python@123')
+            creds = vim.vm.guest.NamePasswordAuthentication(username='r', password='abcd')
                
             f=open(vm_upload_file)
             args = f.read()
@@ -129,7 +129,7 @@ try:
         elif re.search('Windows',vm.summary.config.guestFullName):
                 vm_path=raw_input("ENter the  path inside a windowsVM if you want to upload ")
                 vm_upload_file=raw_input("Enter the path of the file you want to upload in windowsVM ")
-                creds = vim.vm.guest.NamePasswordAuthentication(username='Administrator', password='python@123')
+                creds = vim.vm.guest.NamePasswordAuthentication(username='abcd', password='sbcd@123')
                   
                 f=open(vm_upload_file)
                 args = f.read()
