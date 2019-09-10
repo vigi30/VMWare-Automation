@@ -106,7 +106,7 @@ def main():
     context.verify_mode = ssl.CERT_NONE
 
     # connect this thing
-    si=SmartConnect(host='192.168.150.15', user='administrator@vsphere.local', pwd='Hitachi@123', port=443, sslContext=context)
+    si=SmartConnect(host='2.2.2.2', user='abcdl', pwd='abcd', port=443, sslContext=context)
     # disconnect this thing
     atexit.register(Disconnect, si)
     for i in ls:
